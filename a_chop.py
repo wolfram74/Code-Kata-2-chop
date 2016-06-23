@@ -25,4 +25,5 @@ errors encountered:
     typo with higher
     check got turned into a float
     all instances failed, results return -1
+    in the case of array length 1 it would automatically skip to the end. Why that caused the other lengths to fail is curious.
 '''
