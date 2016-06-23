@@ -11,7 +11,7 @@ continue until low >= high, if that point is reached, return -1
 def chop(query, subject):
     low = 0
     high = len(subject)-1
-    while low < high:
+    while low <= high:
         check = int((low + high)/2)
         test = subject[check]
         if test == query: return check
