@@ -27,7 +27,7 @@ def chop(query, subject):
     else:
         sub_result = chop(query, subject[middle:-1])
         if sub_result == -1 : return -1
-        return sub_result+middle
+        return sub_result+(middle-1)
     return -1
 '''
 erros:
@@ -35,4 +35,5 @@ erros:
     one out of index error and 2 off by one errors.
     undefined variable error
     now only off by 1 errors.
+    I didn't take into account that the middle index was getting over counted. I noticed it writing it, but wasn't sure exactly how to account for it.
 '''
