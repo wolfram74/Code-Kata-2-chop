@@ -19,7 +19,7 @@ def chop(query, subject):
     middle = len(subject)//2
     test = subject[middle]
     if test == query:
-        return query
+        return middle
     elif test > query:
         sub_result = chop(query, subject[0:middle])
         if sub_result == -1 : return -1
@@ -36,4 +36,6 @@ erros:
     undefined variable error
     now only off by 1 errors.
     I didn't take into account that the middle index was getting over counted. I noticed it writing it, but wasn't sure exactly how to account for it.
+    actually, still broken, and larger subjects misbehaving as well.
+    wow, returning query instead of index? ya doof.
 '''
