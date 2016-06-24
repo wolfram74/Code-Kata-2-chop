@@ -14,6 +14,8 @@ if present, return 0.
 '''
 
 def chop(query, subject):
+    if len(subject) == 0:
+        return -1
     middle = len(subject)//2
     test = subject[middle]
     if test == query:
@@ -30,4 +32,6 @@ def chop(query, subject):
 '''
 erros:
     syntax error
+    one out of index error and 2 off by one errors.
+    undefined variable error
 '''
