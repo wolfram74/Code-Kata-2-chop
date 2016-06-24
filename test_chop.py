@@ -36,6 +36,8 @@ class BaseTest(unittest.TestCase):
         self.assertEqual(-1, self.chop(2, [1, 3, 5, 7]))
         self.assertEqual(-1, self.chop(4, [1, 3, 5, 7]))
         self.assertEqual(-1, self.chop(6, [1, 3, 5, 7]))
+    def test_4(self):
+        self.assertEqual(2,  self.chop(5, [1, 3, 5, 7, 10, 15, 22, 32, 47, 69, 72, 94, 103]))
 
 class MethodATest(BaseTest):
     def setUp(self):
