@@ -12,25 +12,25 @@ def chop(query, subject):
     greater = []
     candidates = subject
     while candidates:
-        print(candidates, less, greater)
         check = len(candidates)//2
         value = candidates[check]
         if value == query:
             return check + len(less)
+        if len(candidates) == 1:
+            return -1
         if value < query:
             less += candidates[:check]
             candidates = candidates[check:]
         if value > query:
             greater = candidates[check:] + greater
             candidates = candidates[:check]
-        if len(candidates) == 1:
-            return -1
     return -1
 
 '''
 errors:
     runs on the first try and passes surprising number of tests.
     fails to find first element in collection
+    the 1-element failure mode was prematurely triggering.
 salamanders
 angelo + erin: refresh basics, strings vs symbols vs variable names
 david + bahman: want more references
