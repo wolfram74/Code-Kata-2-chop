@@ -23,10 +23,10 @@ def chop(query, subject):
             return -1
         return sub_result
     else :
-        sub_result = chop(query, subject[check:])
+        sub_result = chop(query, subject[check+1:])
         if sub_result == -1:
             return -1
-        return sub_result+check
+        return sub_result+check+1
 '''
 errors:
     first draft compiles and looking left isn't really working, it seems.
