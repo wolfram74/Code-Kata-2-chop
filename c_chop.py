@@ -31,7 +31,4 @@ errors:
     runs on the first try and passes surprising number of tests.
     fails to find first element in collection
     the 1-element failure mode was prematurely triggering.
-salamanders
-angelo + erin: refresh basics, strings vs symbols vs variable names
-david + bahman: want more references
 '''
