@@ -13,6 +13,7 @@ def chop(query, subject):
     length = len(subject)
     check = int(length*(query-subject[0])/difference)
     test = subject[check]
+    print(check, subject)
     if test == query:
         return check
     elif test > query:
