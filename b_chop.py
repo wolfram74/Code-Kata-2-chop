@@ -23,15 +23,15 @@ def chop(query, subject):
     if test == query:
         return middle
     elif test > query:
-        sub_result = chop(query, subject[:middle])
+        sub_result = chop(query, subject[:middle])#front half
         if sub_result == -1:
             return -1
         return sub_result
     else :
-        sub_result = chop(query, subject[middle:])
+        sub_result = chop(query, subject[middle:])#back half
         if sub_result == -1:
             return -1
-        return sub_result+middle
+        return sub_result+middle #keep in mind what we saw before
     return -1
 '''
 erros:
